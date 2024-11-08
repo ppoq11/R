@@ -1,26 +1,142 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Welcome - Tim's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Team </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fbeff6;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header, footer {
+            background-color: #f4a7b9;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #e593a7;
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            text-align: center;
+            color: #f4a7b9;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero-section p {
+            font-size: 1.3em;
+            margin: 20px 0;
+            color: #333;
+            animation: fadeIn 2s ease;
+        }
+
+        .hero-section button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #f4a7b9;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: fadeIn 2.5s ease;
+        }
+
+        .hero-section button:hover {
+            background-color: #e593a7;
+            transform: scale(1.1);
+        }
+
+        .hero-section button:active {
+            transform: scale(0.95);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer p {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        /* Floating animations for creativity */
+        .floating {
+            position: relative;
+            animation: floatAnimation 3s ease-in-out infinite;
+        }
+
+        @keyframes floatAnimation {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Tim's Portfolio</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section class="welcome">
-          <h2>Welcome to our online portfolio website. We are a team of dedicated professionals focused on providing innovative solutions that contribute to the development of projects and create a positive impact. Our website offers you the opportunity to get to know our creative team members and explore the projects we take pride in. We believe in the power of collaboration and creativity, and we are always striving to achieve the highest levels of quality and excellence in everything we do.</h2>
+        <section class="hero-section">
+            <h1 class="floating">Welcome to Team </h1>
+            <p>We are Tim, a team of developers passionate about designing and developing efficient and innovative code. Our goal is to provide outstanding software solutions that make the digital experience more interactive and engaging. Our passion revolves around programming and continuous development, and we always strive to learn and apply the latest technologies in our projects.</p>
+            <button onclick="navigateToProjects()">Explore Our Projects</button>
         </section>
     </main>
+
     <footer>
-        <p>ALL R.S.L &copy; 2024</p>
+         <p>ALL R.L.S &copy; 2024</p>
     </footer>
+
+    <script>
+        function navigateToProjects() {
+            window.location.href = "projects.html";
+        }
+    </script>
 </body>
 </html>
